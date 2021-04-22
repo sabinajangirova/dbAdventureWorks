@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61102C15-5F8B-456D-BC44-8E7C4E0D43F7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>dbAdventureWorks</RootNamespace>
+    <AssemblyName>dbAdventureWorks</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db\RestTables\Address.cs" />
+    <Compile Include="db\RestTables\AddressType.cs" />
+    <Compile Include="db\RestTables\AWBuildVersion.cs" />
+    <Compile Include="db\RestTables\BusinessEntity.cs" />
+    <Compile Include="db\RestTables\BusinessEntityAddress.cs" />
+    <Compile Include="db\RestTables\BusinessEntityContact.cs" />
+    <Compile Include="db\RestTables\ContactType.cs" />
+    <Compile Include="db\RestTables\CountryRegion.cs" />
+    <Compile Include="db\RestTables\CountryRegionCurrency.cs" />
+    <Compile Include="db\RestTables\CreditCard.cs" />
+    <Compile Include="db\RestTables\Currency.cs" />
+    <Compile Include="db\RestTables\CurrencyRate.cs" />
+    <Compile Include="db\RestTables\Customer.cs" />
+    <Compile Include="db\RestTables\DatabaseLog.cs" />
+    <Compile Include="db\Production\BillOfMaterials.cs" />
+    <Compile Include="db\Production\Culture.cs" />
+    <Compile Include="db\Production\dbAdvent.cs" />
+    <Compile Include="db\Production\Illustration.cs" />
+    <Compile Include="db\Production\Location.cs" />
+    <Compile Include="db\Production\Product.cs" />
+    <Compile Include="db\Production\ProductCategory.cs" />
+    <Compile Include="db\Production\ProductCostHistory.cs" />
+    <Compile Include="db\Production\ProductDescription.cs" />
+    <Compile Include="db\Production\ProductDocument.cs" />
+    <Compile Include="db\Production\ProductInventory.cs" />
+    <Compile Include="db\Production\ProductListPriceHistory.cs" />
+    <Compile Include="db\Production\ProductModel.cs" />
+    <Compile Include="db\Production\ProductModelIllustration.cs" />
+    <Compile Include="db\Production\ProductModelProductDescriptionCulture.cs" />
+    <Compile Include="db\Production\ProductPhoto.cs" />
+    <Compile Include="db\Production\ProductProductPhoto.cs" />
+    <Compile Include="db\Production\ProductReview.cs" />
+    <Compile Include="db\Production\ProductSubcategory.cs" />
+    <Compile Include="db\RestTables\Department.cs" />
+    <Compile Include="db\RestTables\EmailAddress.cs" />
+    <Compile Include="db\RestTables\Employee.cs" />
+    <Compile Include="db\RestTables\EmployeeDepartmentHistory.cs" />
+    <Compile Include="db\RestTables\EmployeePayHistory.cs" />
+    <Compile Include="db\RestTables\ErrorLog.cs" />
+    <Compile Include="db\RestTables\JobCandidate.cs" />
+    <Compile Include="Migrations\202104210423488_RestTables.cs" />
+    <Compile Include="Migrations\202104210423488_RestTables.designer.cs">
+      <DependentUpon>202104210423488_RestTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="db\RestTables\Password.cs" />
+    <Compile Include="db\RestTables\Person.cs" />
+    <Compile Include="db\RestTables\PersonCreditCard.cs" />
+    <Compile Include="db\RestTables\PersonPhone.cs" />
+    <Compile Include="db\RestTables\PhoneNumberType.cs" />
+    <Compile Include="db\RestTables\ProductVendor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="db\Production\ScrapReason.cs" />
+    <Compile Include="db\Production\TransactionHistory.cs" />
+    <Compile Include="db\Production\TransactionHistoryArchive.cs" />
+    <Compile Include="db\Production\UnitMeasure.cs" />
+    <Compile Include="db\Production\WorkOrder.cs" />
+    <Compile Include="db\Production\WorkOrderRouting.cs" />
+    <Compile Include="db\RestTables\PurchaseOrderDetail.cs" />
+    <Compile Include="db\RestTables\PurchaseOrderHeader.cs" />
+    <Compile Include="db\RestTables\restTables.cs" />
+    <Compile Include="db\RestTables\SalesOrderDetail.cs" />
+    <Compile Include="db\RestTables\SalesOrderHeader.cs" />
+    <Compile Include="db\RestTables\SalesOrderHeaderSalesReason.cs" />
+    <Compile Include="db\RestTables\SalesPerson.cs" />
+    <Compile Include="db\RestTables\SalesPersonQuotaHistory.cs" />
+    <Compile Include="db\RestTables\SalesReason.cs" />
+    <Compile Include="db\RestTables\SalesTaxRate.cs" />
+    <Compile Include="db\RestTables\SalesTerritory.cs" />
+    <Compile Include="db\RestTables\SalesTerritoryHistory.cs" />
+    <Compile Include="db\RestTables\Shift.cs" />
+    <Compile Include="db\RestTables\ShipMethod.cs" />
+    <Compile Include="db\RestTables\ShoppingCartItem.cs" />
+    <Compile Include="db\RestTables\SpecialOffer.cs" />
+    <Compile Include="db\RestTables\SpecialOfferProduct.cs" />
+    <Compile Include="db\RestTables\StateProvince.cs" />
+    <Compile Include="db\RestTables\Store.cs" />
+    <Compile Include="db\RestTables\Vendor.cs" />
+    <Compile Include="Repositories\AddressRepository.cs" />
+    <Compile Include="Repositories\BusinessEntityAddressRepository.cs" />
+    <Compile Include="Repositories\BusinessEntityRepository.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\PersonPhoneRepository.cs" />
+    <Compile Include="Repositories\ProductCategoryRepository.cs" />
+    <Compile Include="Repositories\ProductDescriptionRepository.cs" />
+    <Compile Include="Repositories\ProductInventoryRepository.cs" />
+    <Compile Include="Repositories\ProductListPriceHistoryRepository.cs" />
+    <Compile Include="Repositories\ProductPhotoRepository.cs" />
+    <Compile Include="Repositories\ProductProductPhotoRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\SalesOrderDetailRepository.cs" />
+    <Compile Include="Repositories\SalesOrderHeaderRepository.cs" />
+    <Compile Include="Repositories\SalesPersonRepository.cs" />
+    <Compile Include="Repositories\SalesTerritoryRepository.cs" />
+    <Compile Include="Repositories\ShoppingCartItemRepository.cs" />
+    <Compile Include="Repositories\StateProvinceRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="db\Production\packages.config" />
+    <None Include="db\RestTables\packages.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104210423488_RestTables.resx">
+      <DependentUpon>202104210423488_RestTables.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
